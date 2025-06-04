@@ -16,13 +16,11 @@ class UserManager:
         if user.username in self.users:
             raise UserAlreadyExistsError(user.username)
         self.users[user.username] = user
-        print(f"Пользователь {user.username} успешно добавлен")
 
     def remove_user(self, username: str):
         if username not in self.users:
             raise UserNotFoundError(username)
         del self.users[username]
-        print(f"Пользователь {username} успешно удален")
 
     def find_user(self, username: str) -> User:
         if username not in self.users:
