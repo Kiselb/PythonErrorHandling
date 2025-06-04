@@ -41,16 +41,8 @@ def validate_user_input(data):
         print("***** Проверка данных завершена")
 
 if __name__ == "__main__":
-    try:
-        validate_user_input({"name": "Alice", "age": 30})
-        validate_user_input({"age": 30})
-        validate_user_input({"name": "Alice", "age": -30})
-        validate_user_input({"name": "Alice", "age": "abc"})
-        validate_user_input("abc")
-    except Exception as e:
-        print("Ошибка проверки функции: {e}")
-        raise Exception("Ошибка выполнения тестового блока") from e
-    else:
-        pass
-    finally:
-        pass
+    validate_user_input({"name": "Alice", "age": 30})
+    validate_user_input({"age": 30})
+    validate_user_input({"name": "Alice", "age": -30})
+    validate_user_input({"name": "Alice", "age": "abc"})
+    validate_user_input("abc")
