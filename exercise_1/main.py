@@ -21,7 +21,11 @@ def convert_to_int(value):
             raise ValueError("Строка должна содержать только цифры")
         
         result = int(value)
-    
+        
+    except TypeError as e:
+        print("Недопустимый тип аргумента: ожидается строка")
+    except ValueError as e:
+        print("Строка должна содержать только цифры")
     except Exception as e:
         print(f"Произошла непредвиденная ошибка: {e}")
         return None
